@@ -1,38 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: "Share Tech Mono", "Roboto";
+}
+
+.linechart {
+  width: 100%;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container {
+  width: 96%;
+  height: 100%;
+  padding: 1%;
+  flex: 5;
+}
+
+.choose_faction {
+  /* colocar valor en 1 o 0.5 */
+  flex: 1;
+  display: flex;
+}
+
+.stats {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stat_one,
+.stat_two,
+.stat_three,
+.stat_four,
+.stat_five {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
+  margin: 5px;
+  border-radius: 25px;
+  -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
 }
