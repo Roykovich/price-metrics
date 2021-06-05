@@ -1,0 +1,25 @@
+.dark {
+  --text-main: #f2fbff;
+  --text-dimmed: #48484c;
+
+  --elements-main: #1e1e1e;
+  --elements-shadow: #0c0b0d;
+  --elements-highlight: #242426;
+
+  --helpers-green: #00e074;
+  --helpers-red: #ff6b83;
+  --helpers-popup: #00efe2;
+}
+
+.light {
+  --text-main: #1e1e1e;
+  --text-dimmed: #48484c;
+
+  --elements-main: #f1f1f1;
+  --elements-shadow: #e3edef;
+  --elements-highlight: #c1c8cc;
+
+  --helpers-green: #00e074;
+  --helpers-red: #ff6b83;
+  --helpers-popup: #00efe2;
+}
