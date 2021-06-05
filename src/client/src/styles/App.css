@@ -10,13 +10,21 @@
   display: flex;
   flex-direction: column;
   font-family: "Share Tech Mono", "Roboto";
+  background-color: var(--elements-shadow);
+  color: var(--text-main);
 }
 
 .linechart {
+  /* outline: red 1px solid; */
   width: 100%;
   flex: 2;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
+  background-color: var(--elements-main);
+  box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.03),
+    0 8.7px 6.9px rgba(0, 0, 0, 0.042), 0 17.7px 14.2px rgba(0, 0, 0, 0.051),
+    0 36.5px 29.2px rgba(0, 0, 0, 0.063), 0 100px 80px rgba(0, 0, 0, 0.09);
 }
 
 .chart-container {
@@ -33,6 +41,7 @@
 }
 
 .stats {
+  /* outline: blue 1px solid; */
   flex: 1;
   display: flex;
   justify-content: flex-start;
@@ -49,8 +58,17 @@
   justify-content: center;
   align-items: center;
   margin: 5px;
-  border-radius: 25px;
-  -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  background-color: var(--elements-main);
+  box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.03),
+    0 8.7px 6.9px rgba(0, 0, 0, 0.042), 0 17.7px 14.2px rgba(0, 0, 0, 0.051),
+    0 36.5px 29.2px rgba(0, 0, 0, 0.063), 0 100px 80px rgba(0, 0, 0, 0.09);
+}
+
+.stat_one {
+  margin-left: 0px;
+}
+
+.stat_four {
+  margin-right: 0px;
 }
