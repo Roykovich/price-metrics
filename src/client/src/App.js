@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import "./styles/theme.css";
 import "./styles/App.css";
 import LineChart from "./components/LineChart";
 import { randomPrices } from "./generators/generators";
 
 function App() {
+  const [theme, setTheme] = useState("dark");
   const [data, setData] = useState([]); // change this
   const [loaded, setLoaded] = useState(false);
 
@@ -45,16 +47,23 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
+      {/* Line chart starts */}
       <div className="linechart">
-        <div className="chart-container">
-          {loaded === true ? <LineChart datasets={data} /> : "Loading..."}
-        </div>
         <div className="choose_faction">
           <button>Alliance</button>
           <button>Horde</button>
         </div>
+        <div className="chart-container">
+          {loaded === true ? (
+            <LineChart datasets={data} theme={theme} />
+          ) : (
+            "Loading..."
+          )}
+        </div>
       </div>
+      {/* line chart ends */}
+      {/* stats starts */}
       <div className="stats">
         <div className="stat_one">
           <h3 className="server">Faerlinas</h3>
@@ -73,6 +82,7 @@ function App() {
           <h1 className="gold_price">$0.05</h1>
         </div>
       </div>
+      {/* stats ends */}
     </div>
   );
 }
