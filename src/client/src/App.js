@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import "./styles/theme.css";
 import "./styles/App.css";
-import LineChart from "./components/LineChart";
 import { randomPrices } from "./generators/generators";
+
+import LineChart from "./components/LineChart";
+import Stats from "./components/Stats";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -64,24 +66,7 @@ function App() {
       </div>
       {/* line chart ends */}
       {/* stats starts */}
-      <div className="stats">
-        <div className="stat_one">
-          <h3 className="server">Faerlinas</h3>
-          <h1 className="gold_price">$0.05</h1>
-        </div>
-        <div className="stat_two">
-          <h3 className="server">Benediction</h3>
-          <h1 className="gold_price">$0.05</h1>
-        </div>
-        <div className="stat_three">
-          <h3 className="server">Earthfury</h3>
-          <h1 className="gold_price">$0.05</h1>
-        </div>
-        <div className="stat_four">
-          <h3 className="server">Whitemane</h3>
-          <h1 className="gold_price">$0.05</h1>
-        </div>
-      </div>
+      <Stats data={data} loaded={loaded} />
       {/* stats ends */}
     </div>
   );
