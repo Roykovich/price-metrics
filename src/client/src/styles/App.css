@@ -47,11 +47,7 @@
   justify-content: flex-start;
 }
 
-.stat_one,
-.stat_two,
-.stat_three,
-.stat_four,
-.stat_five {
+.stat {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -65,10 +61,10 @@
     0 36.5px 29.2px rgba(0, 0, 0, 0.063), 0 100px 80px rgba(0, 0, 0, 0.09);
 }
 
-.stat_one {
+.first {
   margin-left: 0px;
 }
 
-.stat_four {
+.end {
   margin-right: 0px;
 }
