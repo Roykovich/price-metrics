@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
 
-function LineChart({ datasets }) {
+function LineChart({ datasets, theme }) {
   const chartRef = React.createRef();
   const labels = [
     "Monday",
@@ -34,8 +34,23 @@ function LineChart({ datasets }) {
         },
       },
     };
+
+    if (theme === "dark") {
+      config.options.scales = {
+        x: {
+          grid: {
+            color: "#666666",
+          },
+        },
+        y: {
+          grid: {
+            color: "#666666",
+          },
+        },
+      };
+    }
     Chart.defaults.font.family = "Share Tech Mono";
-    Chart.defaults.plugins.legend.position = "left";
+    Chart.defaults.plugins.legend.position = "right";
 
     new Chart(canvasRef, config);
   }, []);
