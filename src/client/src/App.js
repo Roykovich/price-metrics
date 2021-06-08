@@ -5,6 +5,7 @@ import { randomPrices } from "./generators/generators";
 
 import LineChart from "./components/LineChart";
 import Stats from "./components/Stats";
+import Loader from "./components/Loader";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -60,7 +61,7 @@ function App() {
           {loaded === true ? (
             <LineChart datasets={data} theme={theme} />
           ) : (
-            "Loading..."
+            <Loader />
           )}
         </div>
       </div>
