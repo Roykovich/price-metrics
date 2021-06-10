@@ -1,11 +1,18 @@
 import { useState } from "react";
+import Loader from "./Loader";
 
-const Stat = ({ server, price }) => {
+const Stat = ({ data, loaded }) => {
   return (
     <div className="stat">
-      <h3 className="server">{server}</h3>
-      <h1 className="gold_price">$0.0400</h1>
-      <h2 className="tracker">numerito</h2>
+      {loaded === true ? (
+        <>
+          <h3 className="server">{data.label}</h3>
+          <h1 className="gold_price">$0.0400</h1>
+          <h2 className="tracker">numerito</h2>
+        </>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };
