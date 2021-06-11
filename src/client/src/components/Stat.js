@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Loader from "./Loader";
 
 const Stat = ({ data, loaded }) => {
@@ -7,7 +7,7 @@ const Stat = ({ data, loaded }) => {
       {loaded === true ? (
         <>
           <h3 className="server">{data.label}</h3>
-          <h1 className="gold_price">$0.0400</h1>
+          <h1 className="gold_price">${data.data[0]}</h1>
           <h2 className="tracker">numerito</h2>
         </>
       ) : (
