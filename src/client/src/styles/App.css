@@ -55,12 +55,28 @@
   border-radius: 5px;
 }
 
+.choose_faction div {
+  flex: 0.05;
+  font-size: 1.5rem;
+  background: none;
+  border: var(--text-dimmed) 1px solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose_faction div:hover {
+  border-color: var(--text-main);
+  cursor: pointer;
+}
+
 .choose_faction button:nth-child(1) {
   background: #0002b0;
   border: #0002b0 2px solid;
 }
 
-.choose_faction button:nth-child(2) {
+.choose_faction button:nth-child(3) {
   background: #b20000;
   border: #b20000 2px solid;
 }
@@ -70,7 +86,7 @@
   background: none;
 }
 
-.choose_faction button:nth-child(2):hover {
+.choose_faction button:nth-child(3):hover {
   border: #b20000 2px solid;
   background: none;
 }

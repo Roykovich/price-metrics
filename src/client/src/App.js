@@ -9,8 +9,14 @@ import Loader from "./components/Loader";
 
 function App() {
   const [theme, setTheme] = useState("dark");
-  const [data, setData] = useState([]); // change this
+  const [icon, setIcon] = useState("☀️");
   const [loaded, setLoaded] = useState(false);
+  const [data, setData] = useState([]); // change this
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+    setIcon(icon === "☀️" ? "🌑" : "☀️");
+  };
 
   useEffect(() => {
     const something = function () {
@@ -55,6 +61,7 @@ function App() {
       <div className="linechart">
         <div className="choose_faction">
           <button>Alliance</button>
+          <div onClick={toggleTheme}>{icon}</div>
           <button>Horde</button>
         </div>
         <div className="chart-container">
