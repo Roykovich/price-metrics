@@ -41,10 +41,41 @@
   /* colocar valor en 1 o 0.5 */
   flex: 1;
   display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.choose_faction button {
+  flex: 0.3;
+  font-family: "Share Tech Mono", "Roboto";
+  letter-spacing: 3px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #f2fbff;
+  border-radius: 5px;
+}
+
+.choose_faction button:nth-child(1) {
+  background: #0002b0;
+  border: #0002b0 2px solid;
+}
+
+.choose_faction button:nth-child(2) {
+  background: #b20000;
+  border: #b20000 2px solid;
+}
+
+.choose_faction button:nth-child(1):hover {
+  border: #0002b0 2px solid;
+  background: none;
+}
+
+.choose_faction button:nth-child(2):hover {
+  border: #b20000 2px solid;
+  background: none;
 }
 
 .stats {
-  /* outline: blue 1px solid; */
   flex: 1;
   display: flex;
   justify-content: flex-start;
