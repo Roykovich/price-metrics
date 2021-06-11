@@ -23,6 +23,11 @@ function LineChart({ datasets, theme }) {
       },
       options: {
         maintainAspectRatio: false,
+        responsive: true,
+        title: {
+          display: true,
+          text: "hola",
+        },
         scales: {
           y: {
             ticks: {
@@ -36,13 +41,26 @@ function LineChart({ datasets, theme }) {
     };
 
     if (theme === "dark") {
+      config.options.plugins = {
+        legend: {
+          labels: {
+            color: "#f2fbff",
+          },
+        },
+      };
       config.options.scales = {
         x: {
+          ticks: {
+            color: "#f2fbff",
+          },
           grid: {
             color: "#666666",
           },
         },
         y: {
+          ticks: {
+            color: "#f2fbff",
+          },
           grid: {
             color: "#666666",
           },
@@ -50,7 +68,7 @@ function LineChart({ datasets, theme }) {
       };
     }
     Chart.defaults.font.family = "Share Tech Mono";
-    Chart.defaults.plugins.legend.position = "right";
+    // Chart.defaults.plugins.legend.position = "right";
 
     new Chart(canvasRef, config);
   }, []);
