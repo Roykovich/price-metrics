@@ -101,7 +101,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   margin: 5px;
   border-radius: 15px;
@@ -109,6 +109,31 @@
   box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.03),
     0 8.7px 6.9px rgba(0, 0, 0, 0.042), 0 17.7px 14.2px rgba(0, 0, 0, 0.051),
     0 36.5px 29.2px rgba(0, 0, 0, 0.063), 0 100px 80px rgba(0, 0, 0, 0.09);
+}
+
+.stat * {
+  margin: 0px;
+}
+
+.server {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.gold_price {
+  font-size: 2em;
+}
+
+.profit {
+  color: var(--helpers-green);
+}
+
+.deficit {
+  color: var(--helpers-red);
+}
+
+.neutral {
+  color: var(--text-dimmed);
 }
 
 .first {
