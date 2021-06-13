@@ -7,7 +7,18 @@ const Stats = ({ data, loaded }) => {
       {/*? This could be done better. */}
       {loaded === true
         ? data.map((item, index) => {
-            return <Stat data={item} key={index} loaded={loaded} />;
+            return index === 0 ? (
+              <Stat
+                data={item}
+                key={index}
+                loaded={loaded}
+                modifier={"first"}
+              />
+            ) : index === 3 ? (
+              <Stat data={item} key={index} loaded={loaded} modifier={"end"} />
+            ) : (
+              <Stat data={item} key={index} loaded={loaded} modifier={""} />
+            );
           })
         : (() => {
             let stats = [];
