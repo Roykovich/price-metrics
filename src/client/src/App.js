@@ -3,9 +3,8 @@ import "./styles/theme.css";
 import "./styles/App.css";
 import { randomPrices } from "./generators/generators";
 
-import LineChart from "./components/LineChart";
+import ChartContainer from "./components/ChartContainer";
 import Stats from "./components/Stats";
-import Loader from "./components/Loader";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -81,25 +80,14 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      {/* Line chart starts */}
-      <div className="linechart">
-        <div className="choose_faction">
-          <button>Alliance</button>
-          <div onClick={toggleTheme}>{icon}</div>
-          <button>Horde</button>
-        </div>
-        <div className="chart-container">
-          {loaded === true ? (
-            <LineChart datasets={data} theme={theme} />
-          ) : (
-            <Loader />
-          )}
-        </div>
-      </div>
-      {/* line chart ends */}
-      {/* stats starts */}
+      <ChartContainer
+        data={data}
+        toggleTheme={toggleTheme}
+        theme={theme}
+        icon={icon}
+        loaded={loaded}
+      />
       <Stats data={data} loaded={loaded} />
-      {/* stats ends */}
     </div>
   );
 }
